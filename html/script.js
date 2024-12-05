@@ -3,7 +3,6 @@ let items = [];
 // Listen for the NUI open signal
 $(window).on("message", (event) => {
   if (event.originalEvent.data.action === "open") {
-    showLoader(); // Show loader when opening
     fetchItems();
     $("#nui").css("display", "flex");
   }
@@ -33,11 +32,9 @@ function fetchItems() {
     success: function (data) {
       items = Object.entries(data).map(([name, label]) => ({ name, label }));
       renderItems(items);
-      hideLoader(); // Hide loader after rendering
     },
     error: function (err) {
       console.error("Error fetching items:", err);
-      hideLoader(); // Ensure loader hides on error
     },
   });
 }
@@ -56,14 +53,4 @@ function renderItems(items) {
     `);
     $container.append($div);
   });
-}
-
-// Show loader
-function showLoader() {
-  $("#loader").css("display", "flex");
-}
-
-// Hide loader
-function hideLoader() {
-  $("#loader").hide();
 }
