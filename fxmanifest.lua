@@ -1,21 +1,20 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'YourName'
-description 'Item Display with NUI'
-version '1.0.0'
+author 'Cs0ng0r'
+description 'NUI Item List for ESX Servers'
 
--- Server Scripts
 server_scripts {
     'server.lua'
 }
 
--- Client Scripts
+shared_scripts {
+    'config.lua'
+}
+
 client_scripts {
     'client.lua'
 }
-
--- NUI Files
 ui_page 'html/index.html'
 
 files {

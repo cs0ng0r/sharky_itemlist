@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Item List</title>
+    <title>ItemList</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
@@ -13,9 +13,46 @@
         <input type="text" id="search" placeholder="Item keresése..." />
         <button id="close">Bezárás</button>
       </div>
-      
-      <div id="item-container">
-        
+
+      <div id="item-container"></div>
+
+      <div id="admin-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Item addolása</h2>
+          <div class="selected-item-info">
+            <img id="modal-item-img" src="" alt="Item kép" />
+            <p>
+              <strong id="modal-item-name"></strong> (<span
+                id="modal-item-id"
+              ></span
+              >)
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="player-id">Játékos ID:</label>
+            <input
+              type="number"
+              id="player-id"
+              placeholder="Játékos ID"
+              min="1"
+            />
+          </div>
+          <div class="form-group">
+            <label for="item-amount">Mennyiség:</label>
+            <input
+              type="number"
+              id="item-amount"
+              placeholder="Mennyiség"
+              value="1"
+              min="1"
+            />
+          </div>
+          <div class="button-container">
+            <button id="give-item">Addolás</button>
+          </div>
+          <div id="notification" class="notification"></div>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
