@@ -19,7 +19,7 @@ A `/openItems` paranccsal nyithatod meg az item listát.
 
 ### Admin funkciók
 
-Ha admin vagy (admin vagy superadmin jogosultsággal rendelkezel), akkor:
+Ha admin vagy (configban megadott jogosultsággal rendelkezel), akkor:
 
 1. Kattints egy itemre a listában
 2. Add meg a cél játékos ID-jét
