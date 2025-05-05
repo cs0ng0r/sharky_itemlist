@@ -3,7 +3,6 @@
 Egy script, mely megjeleníti az összes regisztrált itemet a szervereden, és lehetővé teszi az adminok számára, hogy itemeket adjanak játékosoknak.
 
 ## Funkciók
-
 - Összes item megjelenítése képekkel
 - Keresés funkció az itemek között
 - Admin funkció: itemek adása játékosoknak
